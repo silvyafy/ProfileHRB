@@ -1025,6 +1025,179 @@ body {
     }
   }
 </style>
+<!-- ==================== RESOURCES SECTION ==================== -->
+<section id="resources" class="resources-section py-5">
+  <div class="container text-center">
+    <h5 class="text-uppercase fw-bold text-success mb-2">Resources</h5>
+    <h2 class="fw-bold mb-4 text-dark">Download Our Reports & Publications</h2>
+    <p class="text-muted mb-5">Temukan berbagai laporan, publikasi, dan dokumen resmi dari PT. Hutan Rindang Banua yang dapat diunduh secara gratis.</p>
+
+    <div class="resource-list">
+      <!-- Item 1 -->
+      <div class="resource-item">
+        <div class="resource-icon">
+          <i class="bi bi-file-earmark-text"></i>
+        </div>
+        <div class="resource-info">
+          <h5>Laporan Tahunan 2025</h5>
+          <p>Ringkasan kegiatan dan capaian perusahaan selama tahun berjalan.</p>
+        </div>
+        <a href="#" class="download-btn">Download</a>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="resource-item">
+        <div class="resource-icon">
+          <i class="bi bi-file-earmark-pdf"></i>
+        </div>
+        <div class="resource-info">
+          <h5>Dokumen Proyek Katingan Mentaya</h5>
+          <p>Informasi lengkap mengenai proyek konservasi lahan gambut HRB.</p>
+        </div>
+        <a href="#" class="download-btn">Download</a>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="resource-item">
+        <div class="resource-icon">
+          <i class="bi bi-file-earmark-bar-graph"></i>
+        </div>
+        <div class="resource-info">
+          <h5>Environmental Impact Report</h5>
+          <p>Analisis dampak lingkungan dan hasil penelitian terbaru dari tim HRB.</p>
+        </div>
+        <a href="#" class="download-btn">Download</a>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="resource-item">
+        <div class="resource-icon">
+          <i class="bi bi-file-earmark-richtext"></i>
+        </div>
+        <div class="resource-info">
+          <h5>Sustainability Strategy Document</h5>
+          <p>Panduan strategi keberlanjutan perusahaan dalam jangka panjang.</p>
+        </div>
+        <a href="#" class="download-btn">Download</a>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="resource-item">
+        <div class="resource-icon">
+          <i class="bi bi-file-earmark-spreadsheet"></i>
+        </div>
+        <div class="resource-info">
+          <h5>Data Statistik Keanekaragaman Hayati</h5>
+          <p>Kumpulan data spesies flora dan fauna yang dilindungi di area HRB.</p>
+        </div>
+        <a href="#" class="download-btn">Download</a>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="resource-item">
+        <div class="resource-icon">
+          <i class="bi bi-file-earmark-image"></i>
+        </div>
+        <div class="resource-info">
+          <h5>Gallery & Visual Report</h5>
+          <p>Kumpulan dokumentasi visual dan foto kegiatan lapangan HRB.</p>
+        </div>
+        <a href="#" class="download-btn">Download</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<style>
+/* ===== RESOURCES SECTION STYLE ===== */
+.resources-section {
+  background: linear-gradient(135deg, #f2f8f4, #e7f3ea);
+  position: relative;
+  overflow: hidden;
+}
+
+.resources-section::after {
+  content: "";
+  position: absolute;
+  background: url('{{ asset('images/hutan.jpg') }}') center/cover no-repeat;
+  opacity: 0.08;
+  inset: 0;
+  z-index: 0;
+}
+
+.resources-section h5 {
+  color: #4b8a54;
+  letter-spacing: 2px;
+}
+
+.resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.resource-item {
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 6px solid #4b8a54;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.resource-item:hover {
+  transform: translateY(-6px);
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(75, 138, 84, 0.25);
+}
+
+.resource-icon {
+  font-size: 2rem;
+  color: #4b8a54;
+  margin-right: 1rem;
+}
+
+.resource-info {
+  flex: 1;
+  text-align: left;
+}
+
+.resource-info h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #2d4739;
+}
+
+.resource-info p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.download-btn {
+  background-color: #4b8a54;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.download-btn:hover {
+  background-color: #3a6d43;
+  transform: scale(1.05);
+}
+</style>
+
 
 <!-- 🌿 Hero Section -->
 <section class="hero-section text-center d-flex align-items-center justify-content-center">

@@ -145,29 +145,119 @@
   </div>
 </nav>
 <!-- ==================== HERO SECTION ==================== -->
-<section id="hero" class="d-flex align-items-center justify-content-center text-center text-light" 
-         style="background: url('{{ asset('images/hutan.jpg') }}') center/cover no-repeat; height: 100vh; position: relative;">
-  
-  <!-- Overlay gelap biar teksnya keliatan -->
-  <div style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.5); z-index:1;"></div>
+<section id="hero" class="hero-section d-flex align-items-center justify-content-center text-center text-light">
+  <!-- Overlay gradient -->
+  <div class="hero-overlay"></div>
 
-  <!-- Konten Hero -->
-  <div class="about-overlay"></div>
-  <div class="about-content">
-    <h5>ABOUT</h5>
-    <h1>PT. HUTAN RINDANG BANUA</h1>
-    <p>The PT. HUTAN RINDANG BANUA (HRB) is a tropical peatland forest protection and restoration project in Central Kalimantan, Indonesia.</p>
+  <!-- Konten -->
+  <div class="container position-relative z-3">
+    <h5 class="fw-semibold text-success mb-2 animate__animated animate__fadeInDown">WELCOME TO</h5>
+    <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInUp">
+      PT. HUTAN RINDANG BANUA
+    </h1>
+    <p class="lead mx-auto animate__animated animate__fadeIn animate__delay-1s" style="max-width: 750px;">
+      Dedicated to protecting and restoring Indonesia’s tropical peatland forests for a sustainable future.
+    </p>
+
+    <a href="#about-section" class="btn btn-success px-4 py-2 rounded-pill shadow-lg mt-3 animate__animated animate__fadeInUp animate__delay-1s">
+      Explore More
+    </a>
+  </div>
+
+  <!-- Wave transition bawah -->
+  <div class="hero-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#002a18" fill-opacity="1"
+        d="M0,192L80,213.3C160,235,320,277,480,282.7C640,288,800,256,960,229.3C1120,203,1280,181,1360,170.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+      </path>
+    </svg>
   </div>
 </section>
-<!-- Bootstrap JS Bundle -->
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+/* ==================== HERO STYLE ==================== */
+.hero-section {
+  background: url('{{ asset('images/hutan.jpg') }}') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Overlay gradient elegan */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 40, 20, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%);
+  z-index: 1;
+}
+
+/* Teks */
+.hero-section .container {
+  z-index: 2;
+  position: relative;
+  color: #f8f9fa;
+}
+
+/* Tombol */
+.hero-section .btn-success {
+  background: linear-gradient(135deg, #009e60, #004d2b);
+  border: none;
+  transition: all 0.4s ease;
+}
+.hero-section .btn-success:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.4);
+}
+
+/* Wave bawah */
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 3;
+}
+
+/* Animasi smooth parallax */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  animation: moveBg 20s infinite linear alternate;
+}
+
+@keyframes moveBg {
+  0% { background-position: center top; }
+  100% { background-position: center bottom; }
+}
+
+/* Scroll Navbar */
+.navbar.scrolled {
+  background-color: rgba(0, 50, 30, 0.95);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  transition: 0.4s ease;
+}
+</style>
+
 <script>
-window.addEventListener("scroll", function() {
-  const navbar = document.querySelector(".navbar");
-  navbar.classList.toggle("scrolled", window.scrollY > 50);
-});
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 50);
+  });
 </script>
+
+
 <!-- ==================== PROJECT DESCRIPTION SECTION ==================== -->
 <section id="project-description" 
          style="background: linear-gradient(180deg, #f6fbff 0%, #eaf7f0 100%);
